@@ -29,13 +29,15 @@ var factList = [
   "Participants responded to hate speech either by calling out and reporting an inflammatory event and supporting the victim or by withdrawing from the game and interaction completely."
 ];
 
-var factBtn = document.getElementById("factBtn");
-var fact = document.getElementById("fact");
-var count = 0;
+window.onload = function() {
+  var factBtn = document.getElementById("factBtn");
+  var fact = document.getElementById("fact");
+  var count = 0;
 
-if (factBtn) {
-  factBtn.addEventListener("click", displayFact);
-}
+  if (factBtn) {
+    factBtn.addEventListener("click", displayFact);
+  }
+};
 
 function displayFact() {
   fact.innerHTML = factList[count];
