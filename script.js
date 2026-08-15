@@ -39,12 +39,11 @@ function generateScript() {
 }
 
 function displayFact() {
-  var fact = document.getElementById("fact");
+  var factBox = document.getElementById("fact");
   
-  if (fact) {
-    // Picks a random fact from your list
+  if (factBox) {
     var randomIndex = Math.floor(Math.random() * factList.length);
-    fact.innerHTML = factList[randomIndex];
+    factBox.innerHTML = factList[randomIndex];
   }
 }
 
