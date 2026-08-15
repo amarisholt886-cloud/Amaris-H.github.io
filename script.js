@@ -13,21 +13,17 @@ var factList = [
   "Participants responded to hate speech either by calling out and reporting an inflammatory event and supporting the victim or by withdrawing from the game and interaction completely."
 ];
 
-var count = 0;
+
 
 // This wrapper forces the computer to wait for the HTML buttons to exist!
-window.onload = function() {
-  var scriptBtn = document.getElementById("scriptBtn");
-  var factBtn = document.getElementById("factBtn");
+var scriptBtn = document.getElementById("scriptBtn");
+var factBtn = document.getElementById("factBtn");
+var fact = document.getElementById("fact");
+var count = 0;
 
   if (scriptBtn) {
     scriptBtn.addEventListener("click", generateScript);
   }
-
-  if (factBtn) {
-    factBtn.addEventListener("click", displayFact);
-  }
-};
 
 function generateScript() {
   var name = document.getElementById("name").value;
@@ -38,12 +34,14 @@ function generateScript() {
   }
 }
 
-function displayFact() {
-  var factBox = document.getElementById("fact");
-  
-  if (factBox) {
-    var randomIndex = Math.floor(Math.random() * factList.length);
-    factBox.innerHTML = factList[randomIndex];
-  }
+if (factBtn) {
+  factBtn.addEventListener("click", displayFact);
 }
 
+function displayFact() {
+  fact.innerHTML = factList[count];
+  count++;
+  if (count == factList.length) {
+    count = 0;
+  }
+}
