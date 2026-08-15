@@ -42,11 +42,9 @@ function displayFact() {
   var fact = document.getElementById("fact");
   
   if (fact) {
-    fact.innerHTML = factList[count];
-    count++;
-    
-    if (count == factList.length) {
-      count = 0;
-    }
+    // Picks a random fact from your list
+    var randomIndex = Math.floor(Math.random() * factList.length);
+    fact.innerHTML = factList[randomIndex];
   }
 }
+
