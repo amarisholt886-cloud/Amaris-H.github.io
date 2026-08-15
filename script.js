@@ -39,7 +39,7 @@ window.onload = function() {
   }
 };
 
-function displayFact() {
+function genFact() {
   fact.innerHTML = factList[count];
   count++;
   if (count == factList.length) {
