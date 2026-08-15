@@ -3,11 +3,6 @@ KEY FEATURE: Personalize it
 https://stackoverflow.com/questions/26107125/cannot-read-property-addeventlistener-of-null
 */
 
-var displayScript = document.getElementById("scriptReturned");
-var scriptBtn = document.getElementById("scriptBtn");
-var factBtn = document.getElementById("factBtn"); // Grabs your fact button
-//Will need to explain that sometimes the DOM doesn't load all the way, so the browser can't find the element for JavaScript to use
-
 //Move these variables to the top
 var factList = [
   "Males were more likely to perpetuate toxic behavior, while female players were more likely to withdraw.", 
